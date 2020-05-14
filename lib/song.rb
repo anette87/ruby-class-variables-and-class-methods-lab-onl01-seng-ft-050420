@@ -27,8 +27,9 @@ attr_accessor :name, :artist, :genre
     @@artists.uniq
   end 
   
-  def self.genre_count
+  def genre_count
     Hash[*@@genres.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }]
   end 
+  
   
 end
