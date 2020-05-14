@@ -28,6 +28,7 @@ attr_accessor :name, :artist, :genre
   end 
   
   def self.genre_count
-    
+    (bins, freqs) = @@artists.histogram
+  end 
   
 end
